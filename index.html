@@ -4,26 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" type="text/css" href="./src/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" />
+  <!-- Icons to support Material Design -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <script type="module" src="/src/main.tsx"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3Dbuildingtest</title>
 </head>
 
-<body>
+<header>
+  <div id="appbar"></div>
+</header>
 
+
+<body>
+  <div id="clipped-drawer"></div>
   <div id="compass" class="compass">
     <img src="/src/style/compass(1).png" alt="Compass" />
   </div>
 
-  <div id="sphereIdDisplay" class="sphereIdDisplay">
-
-  </div>
-
-
-
+  <div id="sphereIdDisplay" class="sphereIdDisplay"></div>
 
   <div id="root"></div>
-
 
 
 </body>

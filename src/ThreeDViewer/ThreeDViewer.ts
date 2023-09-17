@@ -212,16 +212,6 @@ class ThreeDViewer {
         });
 
 
-
-
-
-
-
-
-
-
-
-
         window.addEventListener('resize', () => {
             this.resize();
         });

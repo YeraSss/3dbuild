@@ -14,6 +14,12 @@ body {
     top: 0;
     left: 0;
     outline: none;
+    width: calc(100% - 240px);
+    /* Adjust the width based on the Drawer width */
+    transition: width 0.3s ease;
+    /* Add a smooth transition for resizing */
+    z-index: 1;
+    /* Bring the viewer above AppBar and Drawer */
 }
 
 .sphereIdDisplay {
@@ -37,7 +43,14 @@ body {
     background-size: cover;
     transform-origin: center center;
     transition: transform 0.5s ease;
+    top: 130px;
+    /* Adjust the top position to be below the AppBar */
+    left: 240px;
+    /* Set it to the Drawer width */
+    z-index: 1;
+    /* Bring the compass below AppBar but above the viewer */
 }
+
 
 span {
     display: grid;
@@ -47,4 +60,37 @@ span {
 
     opacity: 0.8;
     border: 2px solid red;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ensure the AppBar is on top */
+}
+
+#clipped-drawer {
+    position: fixed;
+    top: 64px;
+    /* Height of the AppBar */
+    left: 0;
+    width: 240px;
+    /* Width of the Drawer */
+    height: 100%;
+    /* Full height of the viewport */
+    z-index: 900;
+    /* Lower z-index than AppBar */
+}
+
+#root {
+    position: relative;
+    /* Ensure proper positioning of the Viewer */
+    margin-left: 240px;
+    /* Width of the Drawer */
+    padding-top: 64px;
+    /* Height of the AppBar */
+    z-index: 1100;
+    /* Higher z-index than AppBar and Drawer */
 }

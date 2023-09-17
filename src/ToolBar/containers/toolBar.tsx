@@ -4,9 +4,10 @@ import { ToolBar as ToolBarComponent, ToolBarProps } from "../components/toolBar
 
 function ToolBar(props: ToolBarProps): ReactElement {
 
-    return <div style={{ bottom: "20px", left: 0, right: 0, position: 'absolute' }} >
+    return <div style={{ bottom: "20px", left: 0, right: 0, position: 'fixed' }} >
         <ToolBarComponent handleClick={props.handleClick}></ToolBarComponent>
     </div>;
+
 }
 
 export { ToolBar };
